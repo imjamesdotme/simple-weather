@@ -1,0 +1,29 @@
+#search-bar {
+  @include outer-container(100%);
+  margin: $base-spacing 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $light-gray;
+}
+
+form {
+  @include media($medium-screen-up) {
+    @include span-columns(9);
+    display: inline;
+  }
+}
+
+#search-bar input {
+  @include span-columns(6 of 9);
+}
+
+#search-bar #submit {
+  @include span-columns(3 of 9);
+}
+
+#search-bar #current-position {
+  @include span-columns(12);
+
+  @include media($medium-screen-up) {
+    @include span-columns(3);
+  }
+}

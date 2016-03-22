@@ -1,0 +1,32 @@
+{
+  "name": "Simple Weather",
+  "authors": [
+    "James L <hello@imjames.me>"
+  ],
+  "description": "Simple weather app powered by OpenWeatherMaps.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "weather",
+    "javascript",
+    "jquery",
+    "openweathermaps"
+  ],
+  "license": "MIT",
+  "homepage": "http://imjames.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "normalize-scss": "^3.0.3",
+    "bourbon": "^4.2.6",
+    "neat": "^1.7.4",
+    "weather-icons": "^2.0.10"
+  }
+}

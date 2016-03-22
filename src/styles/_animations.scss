@@ -1,0 +1,80 @@
+@include keyframes (fadeIn) {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5%;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  @include animation-name(fadeIn);
+  @include animation-duration(1s);
+  @include animation-timing-function(linear);
+  @include animation-delay(0.3);
+  @include animation-direction(inital);
+  @include animation-fill-mode(initial);
+  @include animation-play-state(initial);
+}
+
+// Loading animation.
+.circle {
+  display: inline-block;
+  margin: 1%;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: #000000;
+}
+
+.one {
+  @include animation-name(pulse);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(linear);
+  @include animation-delay(initial);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(inital);
+  @include animation-fill-mode(initial);
+  @include animation-play-state(initial);
+}
+
+.two {
+  @include animation-name(pulse);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(linear);
+  @include animation-delay(0.5s);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(inital);
+  @include animation-fill-mode(initial);
+  @include animation-play-state(initial);
+}
+
+.three {
+  @include animation-name(pulse);
+  @include animation-duration(1.5s);
+  @include animation-timing-function(linear);
+  @include animation-delay(1s);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(inital);
+  @include animation-fill-mode(initial);
+  @include animation-play-state(initial);
+}
+
+@include keyframes (pulse) {
+  0% {
+    @include transform(scale(1));
+  }
+
+  50% {
+    @include transform(scale(1.4));
+  }
+
+  100% {
+    @include transform(scale(1));
+  }
+}

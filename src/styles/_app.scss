@@ -1,0 +1,102 @@
+body {
+  padding: 5% 5%;
+
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media($large-screen-up) {
+    padding: 3% 3%;
+  }
+}
+
+#wrapper {
+  @include outer-container;
+  display: none;
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: $dark-gray;
+
+}
+
+#main {
+  @include row();
+}
+
+i#weather-icon {
+  display: block;
+  margin: 0 auto;
+  font-size: 3em;
+}
+
+#icon {
+  @include span-columns(5);
+  @include shift(1);
+
+  @include media($medium-screen-up) {
+    @include span-columns(3);
+    @include shift(3);
+  }
+}
+
+#current-temp {
+  @include span-columns(5);
+
+  @include media($medium-screen-up) {
+    @include span-columns(3);
+  }
+}
+
+#description {
+  margin: $base-spacing auto;
+  letter-spacing: 2px;
+}
+
+#temperature {
+  font-size: 2em;
+}
+
+#temperature, #temp-high, #temp-low {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+// Temperature colors.
+.very-cold {
+  color: $very-cold;
+}
+
+.cold {
+  color: $cold;
+}
+
+.mild {
+  color: $mild;
+}
+
+.warm {
+  color: $warm;
+}
+
+.very-warm {
+  color: $very-warm;
+}
+
+// Loading animation container.
+#loading {
+  display: none;
+  text-align: center;
+}
+
+// Error overlay.
+#overlay {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  margin-left: -3%;
+  padding: 0 0 $base-spacing;
+  background-color: $white;
+  text-align: center;
+  border-bottom: 1px solid $light-gray;
+}
