@@ -50,7 +50,6 @@ $(document).ready(function() {
     .done(function(weather) {
 
       var data = weather;
-      console.log(data);
       displayWeather(data);
       $('#loading').hide();
       $('#wrapper').show();
@@ -146,14 +145,12 @@ $(document).ready(function() {
   // User location search.
   $('#submit').on('click', function(e) {
     e.preventDefault();
-    $('#loading').show();
     locationSearch();
   });
 
   // Get users current location.
   $('#current-position').on('click', function(e){
     e.preventDefault();
-    $('#loading').show();
     currentPosition();
   });
 
